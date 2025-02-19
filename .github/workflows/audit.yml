@@ -14,4 +14,4 @@ jobs:
       - uses: taiki-e/install-action@cargo-deny
       - name: Scan for vulnerabilities
       # RUSTSEC-2023-0071: rsa 0.9.7 Marvin Attack. No fix available right now.
-        run: cargo deny check advisories --ignore "RUSTSEC-2023-0071"
+        run: cargo deny check advisories - --ignore "RUSTSEC-2023-0071"
